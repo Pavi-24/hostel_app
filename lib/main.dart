@@ -4,8 +4,9 @@ import 'package:hostel_app/pages/HomePage.dart';
 import 'firebase_options.dart';
 
 
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 class MyApp extends StatefulWidget {
