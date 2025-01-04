@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hostel_app/pages/LoginPage.dart';
 
 
 class Home extends StatefulWidget {
@@ -62,10 +63,18 @@ class _HomeState extends State<Home> {
         child: ListView(
           children: [
             DrawerHeader(child: Text('Welcome',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0
-                ))),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0
+                  )),
+                ),
+            ListTile(
+              title: Text('Login'),
+              onTap:() {
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Loginpage()));
+              }
+            ),
             ListTile(
               title: Text('Settings'),
             ),
